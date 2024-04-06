@@ -1,0 +1,6 @@
+BIG NOTE: 
+
+This code was made in VS Code. If you wish to run it in CodeBlocks or DevC++ 
+or perhaps any other IDE that involves project filing, create a new project
+first (since VS Code project handling is very different than Codeblocks or
+DevC++ p[roject handling). 

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="basuilConejosEslerIla_AVL" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/basuilConejosEslerIla_AVL" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/basuilConejosEslerIla_AVL" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="addAVL.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="addAVL.h" />
+		<Unit filename="balanceFactor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="balanceFactor.h" />
+		<Unit filename="deleteAVL.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="deleteAVL.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="printing.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="printing.h" />
+		<Unit filename="rotations.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rotations.h" />
+		<Unit filename="searchAVL.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="searchAVL.h" />
+		<Unit filename="traverseAVL.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="traverseAVL.h" />
+		<Unit filename="treeStruct.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

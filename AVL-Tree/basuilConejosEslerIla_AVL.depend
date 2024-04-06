@@ -1,0 +1,69 @@
+# depslib dependency file v1.0
+1711787203 source:c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\deleteavl.c
+	<stdlib.h>
+	"treeStruct.h"
+	"balanceFactor.h"
+	"rotations.h"
+
+1711787825 c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\treestruct.h
+
+1711886455 source:c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"treeStruct.h"
+	"balanceFactor.h"
+	"rotations.h"
+	"addAVL.h"
+	"deleteAVL.h"
+	"searchAVL.h"
+	"traverseAVL.h"
+	"printing.h"
+
+1711786491 c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\balancefactor.h
+
+1711786428 c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\rotations.h
+
+1711786171 c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\addavl.h
+
+1711887430 source:c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\searchavl.c
+	<stdlib.h>
+	<stdio.h>
+	"treeStruct.h"
+	"printing.h"
+
+1711789494 source:c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\traverseavl.c
+	<stdlib.h>
+	<stdio.h>
+	<conio.h>
+	"treeStruct.h"
+
+1711788384 source:c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\balancefactor.c
+	<stdlib.h>
+	"treeStruct.h"
+
+1711787766 source:c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\rotations.c
+	<stdlib.h>
+	"treeStruct.h"
+	"balanceFactor.h"
+
+1711788349 source:c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\addavl.c
+	<stdlib.h>
+	"treeStruct.h"
+	"balanceFactor.h"
+	"rotations.h"
+
+1711788872 c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\traverseavl.h
+
+1711786051 c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\deleteavl.h
+
+1711790195 c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\searchavl.h
+
+1711887868 c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\printing.h
+
+1711887026 source:c:\users\enzo\desktop\coding projects\c exercises\c projects (with multiple files)\submission versions\basuilconejoseslerila_avl\printing.c
+	<stdio.h>
+	<stdlib.h>
+	"treeStruct.h"
+

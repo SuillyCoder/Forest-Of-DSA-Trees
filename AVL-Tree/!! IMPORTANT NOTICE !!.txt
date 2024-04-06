@@ -1,0 +1,5 @@
+BIG NOTE: This was made in CodeBlocks, so if you would want to 
+run this particular code in VS Code, then please remember to
+include the respective C files within the main header file. 
+Don't bother about making a new "project file" because VS Code's 
+project handling is way way easier. 
