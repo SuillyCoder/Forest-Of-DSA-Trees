@@ -11,7 +11,7 @@
 #ifndef PRINTING_H
 #define PRINTING_H
 
-void in_order(struct node* root, int spaces);
+void positioning(struct node* root, int spaces);
 void print_tree(struct node* root);
 
 #endif // PRINTING_H
