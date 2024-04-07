@@ -27,7 +27,7 @@ void postOrder(struct leaf *root){
 }
 
 void breadth (struct leaf *root){
-     if (root != NULL){
+     if (root == NULL){
         return;
      }
         struct leaf *leafQueue[100];
