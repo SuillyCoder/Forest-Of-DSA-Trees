@@ -13,15 +13,13 @@
 #include "searcher.h"
 #include "zigzags.h"
 
-int foundIt = 0;
-
-struct leaf *root = NULL;
-
 int main(){
+   struct leaf *root = NULL;
    char choice, getOut, keepGoing;
    int searchChoice, numInput, deletor;
 
    do{
+    system("cls");
     printf("*******===Splay Tree Practice Module===*******\n\n");
     printf("[A] Add Leaf Nodes\n");
     printf("[B] Delete Leaf Nodes\n");
@@ -29,15 +27,16 @@ int main(){
     printf("[D] Search Leaf Nodes\n");
     printf("[X] Exit\n\n");
 
-    printf("Your Choice: "); scanf("%c", &choice);
+    printf("Your Choice: "); scanf(" %c", &choice);
 
     while (toupper(choice) != 'A' && toupper(choice) != 'B' && toupper(choice) != 'C' && toupper(choice) != 'D' && toupper(choice) != 'X'){
         printf("Enter a valid choice: "); scanf(" %c", &choice);
     }
     switch(toupper(choice)){
-        case 'A': 
+        case 'A':
     //============================ CASE CODE TO DELETE NODES ===============================//
             do{
+                system("cls");
                 printf("Enter a number for a node: "); scanf("%d", &numInput);
                 root = insertLeaf(root, numInput);
                 printf("Current Tree (Note: %d is the root): \n\n", root->value);
@@ -51,35 +50,41 @@ int main(){
             break;
 
     //============================ CASE CODE TO DELETE NODES ===============================//
-        case 'B': 
+        case 'B':
             if (root == NULL){
+                system("cls");
                 printf("No Nodes to Delete!\n");
                 printf("Press Any Key to Continue: "); scanf(" %c", &getOut);
                 printf("\n\n");
             }
             else{
                 do{
+                    foundIt = 0;
+                    system("cls");
                     printf("Enter a node to delete: "); scanf("%d", &deletor);
-                    deleteLeaf(root, deletor, foundIt);
-                    if (foundIt != 1){
-                        printf("Successfully deleted %d from the tree!\n\n", deletor);
+                    root = deleteLeaf(root, deletor);
+                    //printf("Found It Value Test: %d", foundIt);
+                    if (foundIt == 0){
+                        printf("Node not found within the tree!\n\n");
                         printf("Current Tree (Note: %d is the root): \n\n", root->value);
                         printTree(root);
                     }
                     else{
-                        printf("Node not found within the tree!\n\nCurrent Tree:\n\n");
+                        printf("Successfully deleted %d from the tree!\n\n", deletor);
+                        printf("Current Tree (Note: %d is the root): \n\n", root->value);
                         printTree(root);
                     }
                  printf("\n\nAgain? [Y/N]: "); scanf(" %c", &keepGoing);
                  while (toupper(keepGoing) != 'Y' && toupper(keepGoing) != 'N'){
                     printf("Enter a valid choice: "); scanf(" %c", &keepGoing);
-                 } 
+                 }
                 }while(toupper(keepGoing) == 'Y');
             }
             break;
      //============================ CASE CODE TO DELETE NODES ===============================//
 
         case 'C':
+           system("cls");
            if (root == NULL){
                 printf("No Nodes to Traverse!\n");
                 printf("Press Any Key to Continue: "); scanf(" %c", &getOut);
@@ -87,6 +92,7 @@ int main(){
             }
             else{
                 do{
+                system("cls");
 
                 printf("\nWhich search mode would you like to opt for?\n\n");
                 printf("[1] Breadth First Search Traversal: \n");
@@ -96,21 +102,21 @@ int main(){
                 printf("[0] Exit");
                 printf("\nYour choice: "); scanf("%d", &searchChoice);
 
-                while(searchChoice != 1 && searchChoice != 2 && searchChoice != 3 && 
+                while(searchChoice != 1 && searchChoice != 2 && searchChoice != 3 &&
                 searchChoice != 4 && searchChoice != 0){
                     printf("Enter a valid choice: "); scanf(" %d", &searchChoice);
                 }
 
                 switch(searchChoice){
-                    case 1: 
+                    case 1:
                         printf("Current Tree (Note: %d is the root): \n\n", root->value);
                         printTree(root);
-                        printf("\nBreadth First Search Tree Results: \n");
+                        printf("\nBreadth First Search Tree Results: \n\n");
                         breadth(root);
 
-                        printf("Press Any Key to Continue: "); scanf(" %c", &getOut);
+                        printf("\n\nPress Any Key to Continue: "); scanf(" %c", &getOut);
                         break;
-                    case 2: 
+                    case 2:
                         printf("Current Tree (Note: %d is the root): \n\n", root->value);
                         printTree(root);
                         printf("\nDepth First Search (Pre Order) Tree Results: \n\n");
@@ -118,7 +124,7 @@ int main(){
 
                         printf("\n\nPress Any Key to Continue: "); scanf(" %c", &getOut);
                         break;
-                    case 3: 
+                    case 3:
                         printf("Current Tree (Note: %d is the root): \n\n", root->value);
                         printTree(root);
                         printf("\nDepth First Search (In Order) Tree Results: \n\n");
@@ -126,7 +132,7 @@ int main(){
 
                         printf("\n\nPress Any Key to Continue: "); scanf(" %c", &getOut);
                         break;
-                    case 4: 
+                    case 4:
                         printf("Current Tree (Note: %d is the root): \n\n", root->value);
                         printTree(root);
                         printf("\nDepth First Search (Post Order) Tree Results: \n\n");
@@ -141,6 +147,7 @@ int main(){
 
     //============================ CASE CODE TO SEARCH NODES ===============================//
         case 'D':
+            system("cls");
             if (root == NULL){
                 printf("\nNo Nodes to Search For!\n\n");
             }
@@ -162,8 +169,9 @@ int main(){
     }
    }while(toupper(choice) != 'X');
 
+      system("cls");
       printf("\n\n*******===Splay Tree Practice Module===*******\n\n");
       printf("          [  T E R M I N A T E D  ]      \n\n");
     return 0;
-    
+
 }
