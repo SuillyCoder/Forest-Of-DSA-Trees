@@ -12,16 +12,16 @@ void preOrder(struct leaf *root){
 
 void inOrder(struct leaf *root){
     if (root != NULL){
-        preOrder(root->left);
+        inOrder(root->left);
         printf(" %d ", root->value);
-        preOrder(root->right);
+        inOrder(root->right);
     }
 }
 
 void postOrder(struct leaf *root){
     if (root != NULL){
-        preOrder(root->left);
-        preOrder(root->right);
+        postOrder(root->left);
+        postOrder(root->right);
         printf(" %d ", root->value);
     }
 }
@@ -46,4 +46,4 @@ void breadth (struct leaf *root){
                 leafQueue[++rear] = current->right;
             }
         }
-}   
+}
