@@ -1,6 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "treeStruct.h"
+#include "operations.h"
+
+int foundIt = 0;
 
 struct leaf *minValue(struct leaf *root){
     struct leaf *current = root;
@@ -12,7 +15,7 @@ struct leaf *minValue(struct leaf *root){
 }
 
 
-struct leaf *deleteLeaf(struct leaf *root, int deletor, int foundIt){
+struct leaf *deleteLeaf(struct leaf *root, int deletor){
     //BASE CASE
     if (root == NULL){
         return root;
@@ -21,21 +24,21 @@ struct leaf *deleteLeaf(struct leaf *root, int deletor, int foundIt){
     // FINDING THE NUMBER TO BE DELETED:
 
     if (deletor < root->value){
-        root->left = deleteLeaf(root->left, deletor, foundIt);
+        root->left = deleteLeaf(root->left, deletor);
     }
 
     else if (deletor > root ->value){
-        root->right = deleteLeaf(root->right, deletor, foundIt);
+        root->right = deleteLeaf(root->right, deletor);
     }
 
-    // CASE 1 & CASE 2: 
+    // CASE 1 & CASE 2:
 
     else{
         if (root->left == NULL){
             struct leaf *temp = root->right;
             free(root);
             foundIt = 1;
-            return temp;
+            return temp;;
         }
         else if(root->right == NULL){
             struct leaf *temp = root->left;
@@ -43,11 +46,11 @@ struct leaf *deleteLeaf(struct leaf *root, int deletor, int foundIt){
             foundIt = 1;
             return temp;
         }
-    //CASE 3: 
+    //CASE 3:
 
-        struct leaf *temp = minValue(root->right); 
+        struct leaf *temp = minValue(root->right);
         root->value = temp->value;
-        root->right = deleteLeaf(root->right, temp->value, foundIt);
+        root->right = deleteLeaf(root->right, temp->value);
     }
 
     return root;

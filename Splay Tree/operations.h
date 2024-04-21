@@ -5,9 +5,12 @@
 #include "insertNode.c"
 #include "deleteNode.c"
 
+
+extern int foundIt;
+
 struct leaf *createLeaf(int value);
 struct leaf *insertLeaf(struct leaf *root, int number);
-struct leaf *deleteLeaf(struct leaf *root, int deletor, int foundIt);
+struct leaf *deleteLeaf(struct leaf *root, int deletor);
 struct leaf *minValue(struct leaf *root);
 
 #endif

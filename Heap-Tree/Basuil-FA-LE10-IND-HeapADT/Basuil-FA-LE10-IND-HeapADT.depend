@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1712560984 source:z:\basuil-fa-le10-ind-heapadt\insert.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1712562401 z:\basuil-fa-le10-ind-heapadt\header.h
+
+1712556852 source:z:\basuil-fa-le10-ind-heapadt\swap.c
+	<stdlib.h>
+	"header.h"
+
+1712564725 source:z:\basuil-fa-le10-ind-heapadt\treeprinting.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"header.h"
+
+1712562185 source:z:\basuil-fa-le10-ind-heapadt\delete.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1712564742 source:z:\basuil-fa-le10-ind-heapadt\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"header.h"
+
+1712564596 source:z:\basuil-fa-le10-ind-heapadt\heapify.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"header.h"
+
